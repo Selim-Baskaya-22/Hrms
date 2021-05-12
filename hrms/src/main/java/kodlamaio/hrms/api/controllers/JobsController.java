@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlamaio.hrms.business.abstracts.JobService;
 import kodlamaio.hrms.entities.concretes.Job;
 
+
+// Burada jobsun sonuna '/' koydugumuz icin getall da herhangi bir sekilde slash koymamiza gerek kalmiyor
+ 	
+
 @RestController
-@RequestMapping("/api/jobs")
+@RequestMapping("/api/jobs/")
 public class JobsController {
 	
 	private JobService jobService;
@@ -23,7 +27,7 @@ public class JobsController {
 		this.jobService = jobService;
 	}
 	
-	@GetMapping("/getall")
+	@GetMapping("getall")
 	public List<Job> getAll(){
 		return jobService.getAll();
 	}

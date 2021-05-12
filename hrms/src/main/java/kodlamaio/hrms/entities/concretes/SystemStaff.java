@@ -12,6 +12,7 @@ public class SystemStaff {
 	
 	@Id
 	@GeneratedValue	
+	
 	@Column(name="user_id")
 	private int userId;
 	

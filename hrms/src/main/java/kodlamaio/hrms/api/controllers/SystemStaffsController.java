@@ -11,7 +11,7 @@ import kodlamaio.hrms.business.abstracts.SystemStaffService;
 import kodlamaio.hrms.entities.concretes.SystemStaff;
 
 @RestController
-@RequestMapping("/api/systemStaff")
+@RequestMapping("/api/systemStaff/")
 public class SystemStaffsController {
 	
 	private SystemStaffService systemStaffService;
@@ -22,7 +22,7 @@ public class SystemStaffsController {
 		this.systemStaffService = systemStaffService;
 	}
 	
-	@GetMapping("/getall")
+	@GetMapping("getall")
 	public List<SystemStaff> getAll(){
 		return systemStaffService.getAll();
 	}
