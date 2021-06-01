@@ -25,5 +25,5 @@ import kodlamaio.hrms.entities.concretes.Job;
      İste bu yapida @Entity kuralini gecemedigi icin calistirma aninda hata vericek ve programci hatasini kolayca farkedebilecektir 
   */
 public interface JobDao extends JpaRepository<Job, Integer>{
-
+  Job getByName(String name);
 }

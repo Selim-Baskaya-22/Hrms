@@ -1,9 +1,11 @@
 package kodlamaio.hrms.business.abstracts;
 
-import java.util.List;
 
+
+import kodlamaio.hrms.core.business.BusinessCrudService;
 import kodlamaio.hrms.entities.concretes.SystemStaff;
 
-public interface SystemStaffService {
-	List<SystemStaff> getAll();
+public interface SystemStaffService extends BusinessCrudService<SystemStaff>{
+	
+	
 }

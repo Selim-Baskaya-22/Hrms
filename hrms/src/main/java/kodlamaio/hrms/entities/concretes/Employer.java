@@ -1,13 +1,22 @@
 package kodlamaio.hrms.entities.concretes;
 
-public class Employers extends User {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="employers")
+public class Employer extends User {
+
+	@Column(name="company_name")
 	private String companyName;
+	
+	@Column(name="website")
 	private String website;
 
-	public Employers() {}
+	public Employer() {}
 	
-	public Employers(int id,String password,String email,String companyName, String website) {
+	public Employer(int id,String password,String email,String companyName, String website) {
 		super();
 		super.setId(id);
 		super.setEmail(email);

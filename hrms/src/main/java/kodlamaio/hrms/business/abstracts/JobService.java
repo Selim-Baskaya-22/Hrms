@@ -1,11 +1,11 @@
 package kodlamaio.hrms.business.abstracts;
 
-import java.util.List;
+   
 
+import kodlamaio.hrms.core.business.BusinessCrudService;
 import kodlamaio.hrms.entities.concretes.Job;
 
+public interface JobService extends BusinessCrudService<Job>{
 
-
-public interface JobService {
-	List<Job> getAll();
+	
 }

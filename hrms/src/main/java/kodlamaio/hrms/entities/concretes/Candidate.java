@@ -1,34 +1,47 @@
 package kodlamaio.hrms.entities.concretes;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name="candidates")
 public class Candidate extends User{
 	
-	private String firsName;
+	@Column(name="first_name")
+	private String firstName;
+	
+	@Column(name="last_name")
 	private String lastName;
-	private int nationalityId;
+	
+	@Column(name="nationality_id")
+	private String nationalityId;
+	
+	@Column(name="date_of_birth")
 	private LocalDate dateOfBirth;
 	
 	public Candidate() {}
 	
-	public Candidate(int id,String password,String email,String firsName, String lastName, int nationalityId, LocalDate dateOfBirth){
+	public Candidate(int id,String password,String email,String firsName, String lastName, String nationalityId, LocalDate dateOfBirth){
 		super();
 		super.setId(id);
 		super.setEmail(email);
 		super.setPassword(password);
-		this.firsName = firsName;
+		this.firstName = firsName;
 		this.lastName = lastName;
 		this.nationalityId = nationalityId;
 		this.dateOfBirth = dateOfBirth;
 
 		}
 
-	public String getFirsName() {
-		return firsName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirsName(String firsName) {
-		this.firsName = firsName;
+	public void setFirstName(String firsName) {
+		this.firstName = firsName;
 	}
 
 	public String getLastName() {
@@ -39,11 +52,11 @@ public class Candidate extends User{
 		this.lastName = lastName;
 	}
 
-	public int getNationalityId() {
+	public String getNationalityId() {
 		return nationalityId;
 	}
 
-	public void setNationalityId(int nationalityId) {
+	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
 	}
 
