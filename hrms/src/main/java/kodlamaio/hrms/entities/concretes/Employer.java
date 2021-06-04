@@ -1,7 +1,10 @@
 package kodlamaio.hrms.entities.concretes;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +17,8 @@ public class Employer extends User {
 	@Column(name="website")
 	private String website;
 
+	@OneToMany(mappedBy = "employer")
+	private List<JobAdvertisement> advertisements;
 	public Employer() {}
 	
 	public Employer(int id,String password,String email,String companyName, String website) {

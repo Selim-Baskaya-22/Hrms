@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.JobService;
@@ -105,6 +106,12 @@ public class JobManager implements JobService {
 			return new SuccessResult(true);
 		}
 		return new ErrorResult(ErrorMessages.couldntJobDeleted);
+	}
+
+	@Override
+	public DataResult<List<Job>> getAll(int pageNo, int pageSize) {
+		Pageable pageable=PageRequest.of(pageNo-1, pageSize);
+		return new SuccessDataResult<List<Job>>(this.jobDao.findAll(pageable).getContent(),SuccessMessages.jobListed);
 	}
 
 }

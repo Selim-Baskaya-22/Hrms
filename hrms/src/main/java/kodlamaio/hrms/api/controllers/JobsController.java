@@ -31,11 +31,14 @@ public class JobsController {
 		this.jobService = jobService;
 	}
 	
-	@GetMapping("getall")
+	@GetMapping("getAll")
 	public DataResult<List<Job>> getAll(){
 		return jobService.getAll();
 	}
-	
+	@GetMapping("getAllByPage")
+	public DataResult<List<Job>> getAll( int pageNo, int pageSize){
+		return jobService.getAll(pageNo,pageSize);
+	}
 	@PostMapping("add")
 	public Result add(@RequestBody Job job) {
 		return jobService.add(job);

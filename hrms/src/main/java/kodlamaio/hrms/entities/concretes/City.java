@@ -2,7 +2,7 @@ package kodlamaio.hrms.entities.concretes;
 
 import java.util.List;
 
-import javax.persistence.Column; 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,30 +10,31 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
+
+
 @Entity
-@Table(name="jobs")
-public class Job {
+@Table(name = "citys")
+public class City {
+
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name="name")
-	private String name;
+	@Column(name = "city_name")
+	private String cityName;
 	
-	@OneToMany(mappedBy = "job")
+	@OneToMany(mappedBy = "city")
 	private List<JobAdvertisement> advertisements;
-	
-	public Job() {}
-	
-	public Job(int id, String name) {
+
+	public City(int id, String cityName) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.cityName = cityName;
 	}
-	
-
+	public City() {}
 	
 	public int getId() {
 		return id;
@@ -41,10 +42,13 @@ public class Job {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getCityName() {
+		return cityName;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
+	};
+	
+	
+	
 }
