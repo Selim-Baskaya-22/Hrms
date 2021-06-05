@@ -28,7 +28,7 @@ public class School {
 	private String sectionName;
 	
 	@Column(name = "school_name")
-	private String schooName;
+	private String schoolName;
 	
 	@Column(name = "start_year")
 	private LocalDate startYear;
@@ -45,7 +45,7 @@ public class School {
 		this.id = id;
 		this.candidate = candidate;
 		this.sectionName = sectionName;
-		this.schooName = schooName;
+		this.schoolName = schooName;
 		this.startYear = startYear;
 		this.graduationYear = graduationYear;
 		this.createdDate = createdDate;
@@ -77,12 +77,12 @@ public class School {
 		this.sectionName = sectionName;
 	}
 
-	public String getSchooName() {
-		return schooName;
+	public String getSchoolName() {
+		return schoolName;
 	}
 
-	public void setSchooName(String schooName) {
-		this.schooName = schooName;
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
 	}
 
 	public LocalDate getStartYear() {

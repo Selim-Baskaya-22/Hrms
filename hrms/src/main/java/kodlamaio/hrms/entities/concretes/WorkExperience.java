@@ -31,7 +31,7 @@ public class WorkExperience {
 	private String positionName;
 	
 	@Column(name="start_year")
-	private LocalDate startYear;
+	private LocalDate dateOfStart;
 	
 	@Column(name="leaving_date")
 	private LocalDate leavingDate;
@@ -39,14 +39,14 @@ public class WorkExperience {
 	@Column(name="created_date")
 	private LocalDate createdDate;
 
-	public WorkExperience(int id, Candidate candidate, String jobPlace, String positionName, LocalDate startYear,
+	public WorkExperience(int id, Candidate candidate, String jobPlace, String positionName, LocalDate dateOfStart,
 			LocalDate leavingDate, LocalDate createdDate) {
 		super();
 		this.id = id;
 		this.candidate = candidate;
 		this.jobPlace = jobPlace;
 		this.positionName = positionName;
-		this.startYear = startYear;
+		this.dateOfStart = dateOfStart;
 		this.leavingDate = leavingDate;
 		this.createdDate = createdDate;
 	}
@@ -85,12 +85,12 @@ public class WorkExperience {
 		this.positionName = positionName;
 	}
 
-	public LocalDate getStartYear() {
-		return startYear;
+	public LocalDate getDateOfStart() {
+		return dateOfStart;
 	}
 
-	public void setStartYear(LocalDate startYear) {
-		this.startYear = startYear;
+	public void setDateOfStart(LocalDate startYear) {
+		this.dateOfStart = startYear;
 	}
 
 	public LocalDate getLeavingDate() {
