@@ -2,9 +2,11 @@ package kodlamaio.hrms.entities.concretes;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name="candidates")
@@ -21,6 +23,35 @@ public class Candidate extends User{
 	
 	@Column(name="date_of_birth")
 	private LocalDate dateOfBirth;
+	
+	
+	//Mapped Join
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<School> schools;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<WorkExperience> workExperiences;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<Language> languages;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<Image> images;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<Link> links;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<Skill> skills;
+	
+	@OneToMany(mappedBy = "candidates")
+	private List<CoverLetter> coverLetters;
+	
+	
+	
+	
+	
 	
 	public Candidate() {}
 	
@@ -68,7 +99,7 @@ public class Candidate extends User{
 		this.dateOfBirth = dateOfBirth;
 	}
 
-
+	
 	
 }
 
