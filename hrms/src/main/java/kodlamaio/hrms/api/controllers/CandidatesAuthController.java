@@ -17,14 +17,14 @@ import kodlamaio.hrms.entities.concretes.Candidate;
 
 @RestController
 @RequestMapping("api/candidateAuth/")
-public class CandidateAuthController {
+public class CandidatesAuthController {
 	
 	
 
 		private CandidateAuthService authService;
 
 		@Autowired
-		public CandidateAuthController(CandidateAuthService authService) {
+		public CandidatesAuthController(CandidateAuthService authService) {
 			super();
 			this.authService = authService;
 		}

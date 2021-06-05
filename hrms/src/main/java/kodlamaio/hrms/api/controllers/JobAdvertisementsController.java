@@ -21,12 +21,12 @@ import kodlamaio.hrms.entities.dtos.JobAdvertisementDto;
 
 @RestController
 @RequestMapping("api/jobAdvertisement/")
-public class JobAdvertisementController {
+public class JobAdvertisementsController {
 
 	private JobAdvertisementService jobAdvertisementService;
 
 	@Autowired
-	public JobAdvertisementController(JobAdvertisementService jobAdvertisementService) {
+	public JobAdvertisementsController(JobAdvertisementService jobAdvertisementService) {
 		super();
 		this.jobAdvertisementService = jobAdvertisementService;
 	}

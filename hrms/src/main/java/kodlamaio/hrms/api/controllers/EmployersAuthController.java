@@ -12,12 +12,12 @@ import kodlamaio.hrms.entities.concretes.Employer;
 
 @RestController
 @RequestMapping("api/employerAuth/")
-public class EmployerAuthController {
+public class EmployersAuthController {
 	
 	private EmployerAuthService<Employer> employerAuthService;
 
 	@Autowired
-	public EmployerAuthController(EmployerAuthService<Employer> employerAuthService) {
+	public EmployersAuthController(EmployerAuthService<Employer> employerAuthService) {
 		super();
 		this.employerAuthService = employerAuthService;
 	} 
