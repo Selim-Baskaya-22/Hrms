@@ -27,25 +27,25 @@ public class Candidate extends User{
 	
 	//Mapped Join
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<School> schools;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<WorkExperience> workExperiences;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<Language> languages;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<Image> images;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<Link> links;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<Skill> skills;
 	
-	@OneToMany(mappedBy = "candidates")
+	@OneToMany(mappedBy = "candidate")
 	private List<CoverLetter> coverLetters;
 	
 	
